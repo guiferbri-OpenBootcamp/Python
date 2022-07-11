@@ -1,4 +1,4 @@
-def isprimenumber(number: int) -> float:
+def isprimenumber(number: int) -> bool:
     if number > 1:
         for i in range(2, number):
             if (number % i) == 0:
