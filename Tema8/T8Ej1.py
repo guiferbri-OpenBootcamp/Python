@@ -1,0 +1,8 @@
+f = open('T8Ej1_Guiomar.txt', 'w')
+f.write("Creación del fichero\n")
+f.close()
+f = open('T8Ej1_Guiomar.txt', 'a')
+f.write("Escritura en el fichero creado para el ejercicio 1 del tema 8")
+f.close()
+f = open('T8Ej1_Guiomar.txt', 'r')
+print(f.read())

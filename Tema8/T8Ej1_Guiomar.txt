@@ -1,0 +1,2 @@
+Creación del fichero
+Escritura en el fichero creado para el ejercicio 1 del tema 8
