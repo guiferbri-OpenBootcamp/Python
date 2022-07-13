@@ -1,0 +1,19 @@
+{% extends "base_template.html" %}
+
+{% block title %}Directores{% endblock %}
+{% block headerTitle %}Directores ({{ num_directors }}){% endblock %}
+
+{% block content %}
+<table>
+    {% for director in directors %}
+    <tr>
+        <td>
+            <a href="/{{director.id}}">{{ director.name }} {{ director.lastname }}</a>
+        </td>
+        {% cycle '' '' '</tr><tr>' %}
+        {% empty %}
+        <td>No hay datos de directores</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

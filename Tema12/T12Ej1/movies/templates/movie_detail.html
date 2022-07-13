@@ -1,0 +1,10 @@
+{% extends "base_template.html" %}
+
+{% block title %}{{ movie.title }}{% endblock %}
+{% block headerTitle %}{{ movie.title }}{% endblock %}
+
+{% block content %}
+<p>Título: {{ movie.title}}</p>
+<p>Año: {{ movie.year}}</p>
+<p>Sinopsis: {{ movie.summary}}</p>
+{% endblock %}

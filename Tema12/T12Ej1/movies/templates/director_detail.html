@@ -1,0 +1,25 @@
+{% extends "base_template.html" %}
+
+{% block title %}{{ director.lastname }}{% endblock %}
+{% block headerTitle %}{{ director.name }} {{ director.lastname }}{% endblock %}
+
+{% block content %}
+<p>Nacimiento: {{ director.birthdate}}</p>
+{% if director.deathdate %}
+<p>Fallecimiento: {{director.deathdate }}</p>
+{% endif %}
+
+<h4>Peliculas</h4>
+<table>
+    {% for movie in director.movie_set.all %}
+    <tr>
+        <td>
+            <a href="/movie/{{movie.id}}">{{ movie.title }}</a>
+        </td>
+        {% cycle '' '' '</tr><tr>' %}
+    {% empty %}
+    <td>No existen películas para este director</td>
+</tr>
+    {% endfor %}
+</table>
+{% endblock %}
